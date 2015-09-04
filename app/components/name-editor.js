@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   name: null,
-  onSave: null,
+  save: null,
 
   isEditing: false,
   editedName: null,
