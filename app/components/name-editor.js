@@ -1,9 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  name: null,
-  save: null,
-
   isEditing: false,
   editedName: null,
   error: null,
@@ -21,7 +18,7 @@ export default Ember.Component.extend({
     },
 
     onEdit() {
-      this.set('editedName', this.get('name'));
+      this.set('editedName', this.attrs.name);
       this.set('isEditing', true);
     },
 
