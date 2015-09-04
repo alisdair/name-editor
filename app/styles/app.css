@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: helvetica;
+}
+
+.is-clickable {
+  cursor: pointer;
+}
+
+.is-editable:hover:after {
+  content: '- Edit';
+  margin-left: 1ch;
+  color: #999;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 24px;
+  padding: 5px 0;
+  margin: 16px 0;
+}
+
+input, button {
+  line-height: 2;
+  font-size: 16px;
+  border: 1px solid #999;
+  padding: 0 1ch;
+}
+
+.text-danger {
+  color: #c00;
+}
+
+input.is-error {
+  border-color: #c00;
+}
+
+button {
+  background: #999;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #aaa;
+}
+
+button.primary {
+  background: #18e;
+  border-color: #16d;
+}
+
+button.primary:hover {
+  background: #19e;
+}
+
+.form-group {
+  margin: 16px 0;
+}
+
+button:disabled, button:disabled:hover {
+  background: #bbb;
+  border-color: #bbb;
+  color: #777;
+  cursor: not-allowed;
+}
