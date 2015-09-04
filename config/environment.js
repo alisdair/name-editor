@@ -4,8 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'name-editor',
     environment: environment,
-    baseURL: '/',
-    locationType: 'auto',
+    baseURL: '/name-editor',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
