@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'name-editor',
     environment: environment,
-    baseURL: '/name-editor',
+    baseURL: '/',
     locationType: 'hash',
     EmberENV: {
       FEATURES: {
@@ -40,7 +40,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    // For GitHub Pages
+    baseURL: '/name-editor'
   }
 
   return ENV;
