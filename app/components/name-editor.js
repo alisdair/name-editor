@@ -18,7 +18,7 @@ export default Ember.Component.extend({
     },
 
     onEdit() {
-      this.set('editedName', this.attrs.name);
+      this.set('editedName', this.get('name'));
       this.set('isEditing', true);
     },
 
