@@ -4,8 +4,18 @@ import hbs from 'htmlbars-inline-precompile';
 
 let { resolve } = Ember.RSVP;
 
+let features = Ember.Service.extend({
+  isEnabled() {
+    return false;
+  }
+});
+
 moduleForComponent('name-editor', 'Integration | Component | name editor', {
-  integration: true
+  integration: true,
+  beforeEach() {
+    this.register('service:features', features);
+    this.container.injection('component', 'features', 'service:features');
+  }
 });
 
 test('basic operation', function(assert) {
