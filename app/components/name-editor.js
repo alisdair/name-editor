@@ -7,6 +7,14 @@ export default Ember.Component.extend({
 
   saveDisabled: Ember.computed.empty('editedName'),
 
+  didReceiveAttrs() {
+    if (this.features.isEnabled('showPlaceholder')) {
+      this.set('placeholder', 'Name');
+    } else {
+      this.set('placeholder', null);
+    }
+  },
+
   actions: {
     onSave() {
       this.attrs.save(this.get('editedName')).then(() => {

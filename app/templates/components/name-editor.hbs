@@ -1,7 +1,7 @@
 {{#if isEditing}}
   <form {{action "onSave" on="submit"}}>
     <div class="form-group">
-      {{input value=editedName}}
+      {{input value=editedName placeholder=placeholder}}
 
       <button disabled={{saveDisabled}} class="primary">
         Save name
