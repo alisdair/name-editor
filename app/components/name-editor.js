@@ -1,11 +1,13 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+const { Component, computed } = Ember;
+
+export default Component.extend({
   isEditing: false,
   editedName: null,
   error: null,
 
-  saveDisabled: Ember.computed.empty('editedName'),
+  saveDisabled: computed.empty('editedName'),
 
   didReceiveAttrs() {
     if (this.features.isEnabled('showPlaceholder')) {
@@ -16,7 +18,7 @@ export default Ember.Component.extend({
   },
 
   actions: {
-    onSave() {
+    save() {
       this.attrs.save(this.get('editedName')).then(() => {
         this.set('isEditing', false);
         this.set('error', null);
@@ -25,12 +27,12 @@ export default Ember.Component.extend({
       });
     },
 
-    onEdit() {
+    edit() {
       this.set('editedName', this.get('name'));
       this.set('isEditing', true);
     },
 
-    onCancel() {
+    cancel() {
       this.set('isEditing', false);
     }
   }

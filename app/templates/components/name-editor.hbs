@@ -1,12 +1,12 @@
 {{#if isEditing}}
-  <form {{action "onSave" on="submit"}}>
+  <form {{action "save" on="submit"}}>
     <div class="form-group">
       {{input value=editedName placeholder=placeholder}}
 
       <button disabled={{saveDisabled}} class="primary">
         Save name
       </button>
-      <button {{action "onCancel"}} type="button">
+      <button {{action "cancel"}} type="button">
         Cancel
       </button>
     </div>
@@ -14,5 +14,5 @@
 
   {{#if error}}<div class="text-danger">{{error}}</div>{{/if}}
 {{else}}
-  <h3 class="is-clickable is-editable" {{action "onEdit"}}>{{name}}</h3>
+  <h3 class="is-clickable is-editable" {{action "edit"}}>{{name}}</h3>
 {{/if}}
