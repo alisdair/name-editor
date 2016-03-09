@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { Logger, RSVP, Route } = Ember
+const { Logger, RSVP, Route } = Ember;
 
 let ModelClass = Ember.Object.extend({
   name: null,
