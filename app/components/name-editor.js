@@ -9,14 +9,6 @@ export default Component.extend({
 
   saveDisabled: computed.empty('editedName'),
 
-  didReceiveAttrs() {
-    if (this.features.isEnabled('showPlaceholder')) {
-      this.set('placeholder', 'Name');
-    } else {
-      this.set('placeholder', null);
-    }
-  },
-
   actions: {
     save() {
       this.attrs.save(this.get('editedName')).then(() => {
