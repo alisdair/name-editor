@@ -14,7 +14,7 @@ moduleForComponent('name-editor', 'Integration | Component | name editor', {
   integration: true,
   beforeEach() {
     this.register('service:features', features);
-    this.container.injection('component', 'features', 'service:features');
+    Ember.getOwner(this).inject('component', 'features', 'service:features');
   }
 });
 
